@@ -25,16 +25,16 @@ Mobilizations é um projeto de conclusão da disciplina de Tópicos 2: Engenhari
 ## Planejamento
 * Planejar aspectos dos incentivos aos usuários
     - Sistema de conquistas
-        ► X quantidade de metas aprovadas
-        ► X quantidade de metas concluídas
-        ► Valor total X doado
-        ► Compartilhar e Publicar X vezes
-        ► Convidar X amigos
+        * X quantidade de metas aprovadas
+        * X quantidade de metas concluídas
+        * Valor total X doado
+        * Compartilhar e Publicar X vezes
+        * Convidar X amigos
     - Sistema de níveis
-        ► Cada nível libera um "badge" diferente
+        * Cada nível libera um "badge" diferente
     - Pontuação
-        ► Acessos através de link único e convites
-        ► Compartilhamento em redes sociais
-        ► Aprovação de uma meta
-        ► Doação
+        * Acessos através de link único e convites
+        * Compartilhamento em redes sociais
+        * Aprovação de uma meta
+        * Doação
     - Ranking
