@@ -13,7 +13,6 @@ Esquema do Cenário: Login e autenticação
 		E clica no botão Entrar
 		Então o usuário visualiza a mensagem de Autenticado com sucesso
 		Quando o metodo de autenticação for Facebook
-		E clica em aceitar as condições de uso
 		Então o usuário visualiza a mensagem de Autenticado com sucesso
 	Então o usuário visualiza a tela <link>
 	

@@ -13,7 +13,7 @@ Esquema do Cenário: Criar usuário por email
     E clica em Cadastrar
     Então o sistema o enviará um email de confimação
     Quando o usuário clicar no link de confirmação no email
-    Então o usuário visualiza a mensagem de Cadastro efetuado com sucesso
+    Então o usuário vê seu nome no espaço onde mostra o usuário logado
 
     Exemplos:
         |   nome    |   email           |   senha       |
