@@ -1,0 +1,42 @@
+div.col-md-6{
+  height:60%;
+}
+
+div.col-md-5{
+  border-color:black;
+  border:2px;
+  height:600px;
+}
+
+div.container{
+  border-color:black;
+  .:2px;
+  width:90%;
+  height:90%;
+  overflow:hidden;
+}
+
+h1.text-justify{
+}
+
+div.container{
+}
+
+input.input-sm{
+  width:60%;
+}
+
+button.btn.btn-default{
+  background-color:#0061ff;
+  width:60%;
+}
+
+div.row{
+  height:600px;
+}
+
+input{
+  white-space:pro;
+  width:60%;
+}
+
