@@ -28,7 +28,7 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#"><img class="img-circle" src="assets/img/user.png" width="25" height="25"><strong>Usuário</strong><span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">                 
 							<li role="presentation"><a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a></li>															
-							<li role="presentation"><a href="#">Second Item</a></li>													
+							<li role="presentation"><a href="#" onclick="document.getElementById('id02').style.display='block'">Cadastro</a></li>													
                         </ul>
                     </li>
 				</ul>
@@ -56,6 +56,36 @@
 			<div class="container_login" style="background-color:#f1f1f1">
 				<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
 				<span class="psw">Esqueceu <a href="#">a senha?</a></span>
+			</div>
+		</form>
+	</div>
+	<!--Tela de Cadastro-->
+	<div id="id02" class="modal">								  
+		<form class="modal-content animate" action="/action_page.php">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Fechar">&times;</span>
+				<img src="assets/img/cadastro_icon.png" alt="Avatar" class="avatar">
+			</div>
+
+			<div class="container_login">
+				<label><b>Usuário</b></label>
+				<input type="text" placeholder="Entre com nome de usuário" name="uname" required>
+
+				<label><b>Senha</b></label>
+				<input type="password" placeholder="Entre com a senha" name="psw" required>
+				
+				<label><b>Confirme a Senha</b></label>
+				<input type="password" placeholder="Entre novamente com a senha" name="pswC" required>
+
+				<label><b>Email</b></label>
+				<input type="password" placeholder="Entre com o email" name="email" required>
+
+				<button id="button-blue" type="submit">Cadastrar</button>
+
+
+			</div>
+			<div class="container_login" style="background-color:#f1f1f1">
+				<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancelar</button>
 			</div>
 		</form>
 	</div>

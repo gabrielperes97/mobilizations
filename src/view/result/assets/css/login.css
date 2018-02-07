@@ -21,7 +21,9 @@ button {
 button:hover {
     opacity: 0.8;
 }
-
+#button-blue{
+    background-color:#1E90FF;
+}
 /* Extra styles for the cancel button */
 .cancelbtn {
     width: auto;
