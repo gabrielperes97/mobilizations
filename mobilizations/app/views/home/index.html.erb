@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mobilizations</title>
+	<link rel="stylesheet" href="assets/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/login.css">
+	<link rel="stylesheet" href="assets/timeline.css">
+	<link rel="stylesheet" href="assets/styles.css">
+	<link rel="stylesheet" href="assets/navbar.css">
+</head>
+
+<body>
+	<!--Navbar-->
+    <nav id="header" class="navbar navbar-fixed-top">
+		<div id="header-container" class="container navbar-container">
+			<!--Esquerda-->
+			<div class="navbar-header">
+				<a id="brand" class="navbar-brand" href="#">Mobilizations</a>
+			</div>
+			<!--Direita-->
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#"><img class="img-circle" src="assets/user.png" width="25" height="25"><strong>Usuário</strong><span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">                 
+							<li role="presentation"><a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a></li>															
+							<li role="presentation"><a href="#" onclick="document.getElementById('id02').style.display='block'">Cadastro</a></li>													
+                        </ul>
+                    </li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--Tela de login-->
+	<div id="id01" class="modal">								  
+		<form class="modal-content animate" action="/action_page.php">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Fechar">&times;</span>
+				<img src="assets/fuser.png" alt="Avatar" class="avatar">
+			</div>
+
+			<div class="container_login">
+				<label><b>Email</b></label>
+				<input type="text" placeholder="Entre com o email" name="email" required>
+
+				<label><b>Senha</b></label>
+				<input type="password" placeholder="Entre com a senha" name="psw" required>
+
+				<button type="submit">Login</button>
+				<label><input type="checkbox" checked="checked">Lembrar</label>
+			</div>
+			<div class="container_login" style="background-color:#f1f1f1">
+				<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+				<span class="psw">Esqueceu <a href="#">a senha?</a></span>
+			</div>
+		</form>
+	</div>
+	<!--Tela de Cadastro-->
+	<div id="id02" class="modal">								  
+		<form class="modal-content animate" action="/action_page.php">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Fechar">&times;</span>
+				<img src="assets/cadastro_icon.png" alt="Avatar" class="avatar">
+			</div>
+
+			<div class="container_login">
+				<label><b>Nome</b></label>
+				<input type="text" placeholder="Entre com seu nome" name="username" required>
+
+				<label><b>Senha</b></label>
+				<input type="password" placeholder="Entre com a senha" name="psw" required>
+				
+				<label><b>Confirme a Senha</b></label>
+				<input type="password" placeholder="Entre novamente com a senha" name="pswC" required>
+
+				<label><b>Email</b></label>
+				<input type="password" placeholder="Entre com o email" name="email" required>
+
+				<button id="button-blue" type="submit">Cadastrar</button>
+
+
+			</div>
+			<div class="container_login" style="background-color:#f1f1f1">
+				<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancelar</button>
+			</div>
+		</form>
+	</div>
+	<!--Corpo Principal-->
+	<div class="mob-tittle col-lg-7 col-md-7">
+		<h1 class="text-left">Avenida Verde</h1>
+	</div>
+	<!--Parte Timeline-->
+	<div class="container-left col-lg-7 col-md-7">
+		<ul class="timeline">
+			<li class="timeline-inverted">
+				<div class="timeline-badge warning"><i class="glyphicon glyphicon-check"></i></div>
+				<div class="timeline-panel">
+					<div class="timeline-heading">
+						<h4 class="timeline-title">Mussum ipsum cacilds</h4>
+					</div>
+					<div class="timeline-time">
+						<h6 class="time-tittle"><span class="glyphicon glyphicon-time"></span><time class="time">X</time> segundos atrás</h6>
+					</div>
+					<div class="timeline-body">
+						<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+						<p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
+					</div>
+				</div>
+			</li>
+			<li class="timeline-inverted">
+				<div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
+				<div class="timeline-panel">
+					<div class="timeline-heading">
+						<h4 class="timeline-title">Mussum ipsum cacilds</h4>
+					</div>
+					<div class="timeline-time">
+						<h6 class="time-tittle"><span class="glyphicon glyphicon-time"></span><time class="time">X</time> segundos atrás</h6>
+					</div>
+					<div class="timeline-body">
+						<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+					</div>
+				</div>
+			</li>
+			<li class="timeline-inverted">
+				<div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
+				<div class="timeline-panel">
+					<div class="timeline-heading">
+						<h4 class="timeline-title">Mussum ipsum cacilds</h4>
+					</div>
+					<div class="timeline-time">
+						<h6 class="time-tittle"><span class="glyphicon glyphicon-time"></span><time class="time">X</time> segundos atrás</h6>
+					</div>
+					<div class="timeline-body">
+						<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+					</div>
+				</div>
+			</li>
+			<li class="timeline-inverted">
+				<div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
+				<div class="timeline-panel">
+					<div class="timeline-heading">
+						<h4 class="timeline-title">Mussum ipsum cacilds</h4>
+					</div>
+					<div class="timeline-time">
+						<h6 class="time-tittle"><span class="glyphicon glyphicon-time"></span><time class="time">X</time> segundos atrás</h6>
+					</div>
+					<div class="timeline-body">
+						<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!--Parte de Metas e Ranking-->
+	<div class="container-right col-lg-5 col-md-5" id="stayFixed">
+		<div class="row">
+			<div class="meta-tittle">
+				<h3><strong>Metas</strong> </h3>
+			</div>
+			<p><h4 class="timeline-title">Arrecadar R$1.000</h4><p>
+			<div class="progress">
+				<div class="progress-bar progress-bar-success progress-bar-striped active" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">50%</div>
+			</div>
+			<p><h4 class="timeline-title">Plantar 50 árvores</h4><p>
+			<div class="progress">
+				<div class="progress-bar progress-bar-success progress-bar-striped active" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">30%</div>
+			</div>                        
+		</div>
+		<div class="row">
+			<div class="meta-tittle">
+				<h3><strong>Ranking</strong> </h3>
+			</div>
+			<div class="table-responsive">
+				<table class="table table-condensed">
+					<tbody>
+						<tr>
+							<td><strong>1º </strong></td>
+							<td><img class="img-circle" src="assets/user.png" width="25" height="25">Usuário X</td>
+						</tr>
+						<tr>
+							<td><strong>2º </strong></td>
+							<td><img class="img-circle" src="assets/user.png" width="25" height="25">Usuário Y</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!--Scripts JS-->
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/bootstrap.min.js"></script>
+	<script src="assets/login.js"></script>
+	<script src="assets/navbar.js"></script>
+</body>
+</html>
