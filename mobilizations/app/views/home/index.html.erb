@@ -25,10 +25,25 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#"><img class="img-circle" src="assets/user.png" width="25" height="25"><strong>Usuário</strong><span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">                 
-							<li role="presentation"><a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a></li>															
-							<li role="presentation"><a href="#" onclick="document.getElementById('id02').style.display='block'">Cadastro</a></li>													
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">
+							<img class="img-circle" src="assets/user.png" width="25" height="25">
+							<strong>
+								<% if @user.nil? %>
+									Faça ou crie seu Login
+								<% else %>
+									<%= "Bem vindo, "+@user.name %>
+								<%end%>
+							</strong>
+							<span class="caret"></span>
+						</a>
+                        <ul class="dropdown-menu" role="menu">    
+							<% if @user.nil? %>
+								<li role="presentation"><a href="javascript:void(0);" onclick="document.getElementById('id01').style.display='block'">Login</a></li>															
+								<li role="presentation"><a href="javascript:void(0);" onclick="document.getElementById('id02').style.display='block'">Cadastro</a></li>	
+							<% else %>
+								<li role="presentation"><a href="javascript:void(0);" class="unlogin">Sair</a></>
+							<%end%>             
+																			
                         </ul>
                     </li>
 				</ul>
@@ -37,7 +52,7 @@
 	</nav>
 	<!--Tela de login-->
 	<div id="id01" class="modal">								  
-		<form class="modal-content animate" action="/action_page.php">
+		<form class="modal-content animate" action="/home" method="post" data-remote="true" accept-charset="UTF-8">
 			<div class="imgcontainer">
 				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Fechar">&times;</span>
 				<img src="assets/fuser.png" alt="Avatar" class="avatar">
@@ -45,13 +60,14 @@
 
 			<div class="container_login">
 				<label><b>Email</b></label>
-				<input type="text" placeholder="Entre com o email" name="email" required>
+				<input type="text" placeholder="Entre com o email" name="login[email]" required>
 
 				<label><b>Senha</b></label>
-				<input type="password" placeholder="Entre com a senha" name="psw" required>
+				<input type="password" placeholder="Entre com a senha" name="login[password]" required>
 
+				<div id="login-messages"> </div>
 				<button type="submit">Login</button>
-				<label><input type="checkbox" checked="checked">Lembrar</label>
+				<label><input type="checkbox" checked="checked" name="login[remember]">Lembrar</label>
 			</div>
 			<div class="container_login" style="background-color:#f1f1f1">
 				<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
@@ -61,7 +77,7 @@
 	</div>
 	<!--Tela de Cadastro-->
 	<div id="id02" class="modal">								  
-		<form class="modal-content animate" action="/action_page.php">
+		<form class="modal-content animate" action="/usuario" method="post" data-remote="true" accept-charset="UTF-8">
 			<div class="imgcontainer">
 				<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Fechar">&times;</span>
 				<img src="assets/cadastro_icon.png" alt="Avatar" class="avatar">
@@ -69,16 +85,18 @@
 
 			<div class="container_login">
 				<label><b>Nome</b></label>
-				<input type="text" placeholder="Entre com seu nome" name="username" required>
+				<input type="text" placeholder="Entre com seu nome" name="usuario[name]" required>
 
 				<label><b>Senha</b></label>
-				<input type="password" placeholder="Entre com a senha" name="psw" required>
+				<input type="password" placeholder="Entre com a senha" name="usuario[password]" required>
 				
 				<label><b>Confirme a Senha</b></label>
-				<input type="password" placeholder="Entre novamente com a senha" name="pswC" required>
+				<input type="password" placeholder="Entre novamente com a senha" name="usuario[passwordC]" required>
 
 				<label><b>Email</b></label>
-				<input type="password" placeholder="Entre com o email" name="email" required>
+				<input type="password" placeholder="Entre com o email" name="usuario[email]" required>
+
+				<div id="register-messages"> </div>
 
 				<button id="button-blue" type="submit">Cadastrar</button>
 

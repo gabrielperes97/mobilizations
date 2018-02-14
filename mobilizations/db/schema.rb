@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180208122914) do
+ActiveRecord::Schema.define(version: 20180214032628) do
 
   create_table "metas", force: :cascade do |t|
     t.string "title", null: false
@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(version: 20180208122914) do
     t.string "name", null: false
     t.string "email", null: false
     t.string "password", null: false
-    t.integer "points", null: false
-    t.integer "level"
-    t.integer "admin_level"
+    t.integer "points", default: 0, null: false
+    t.integer "level", default: 0, null: false
+    t.integer "admin_level", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
