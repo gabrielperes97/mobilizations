@@ -1,0 +1,3 @@
+class RealizacaoMetaController < ApplicationController
+    
+end

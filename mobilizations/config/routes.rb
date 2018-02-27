@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :home
   resource :usuario
   resource :meta
+  resource :realizacao_meta
   root :to => "home#index"
 end

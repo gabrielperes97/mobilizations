@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180219203446) do
+ActiveRecord::Schema.define(version: 20180227161614) do
 
   create_table "meta", force: :cascade do |t|
     t.string "title", null: false
@@ -23,6 +23,23 @@ ActiveRecord::Schema.define(version: 20180219203446) do
     t.datetime "closed_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "unity", null: false
+    t.integer "usuarios_id"
+    t.index ["usuarios_id"], name: "index_meta_on_usuarios_id"
+  end
+
+  create_table "realizacao_meta", force: :cascade do |t|
+    t.text "comentario", null: false
+    t.float "contribuicao", null: false
+    t.integer "meta_id"
+    t.integer "criado_por"
+    t.datetime "aprovado_em"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "aprovado_por"
+    t.index ["aprovado_por"], name: "index_realizacao_meta_on_aprovado_por"
+    t.index ["criado_por"], name: "index_realizacao_meta_on_criado_por"
+    t.index ["meta_id"], name: "index_realizacao_meta_on_meta_id"
   end
 
   create_table "usuarios", force: :cascade do |t|
