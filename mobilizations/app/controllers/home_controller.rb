@@ -11,7 +11,6 @@ class HomeController < ApplicationController
 
     def create
         #Request for um login
-        print(request)
         if (not request[:login].nil?)
             @user = Usuario.find_by(:email => request[:login][:email], :password => request[:login][:password])
             respond_to do |format|
@@ -23,7 +22,6 @@ class HomeController < ApplicationController
                 end
             end
         else
-            print(request)
             if (not request[:unlogin].nil?)
                 session[:login_id] = nil
                 respond_to {|format| format.js {render :js => "location.reload();" } }

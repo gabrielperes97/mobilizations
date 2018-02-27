@@ -1,0 +1,15 @@
+<body>
+    <%= form_for @meta, :url => "../meta", remote: true do |f| %>
+        <%= f.label :title %>:
+        <%= f.text_field :title %><br />
+
+        <%= f.label :description %>:
+        <%= f.text_field :description %><br />
+
+        <%= f.label :time_limit %>:
+        <%= f.datetime_field :time_limit %><br />
+
+        <%= f.submit %>
+    <% end %>
+    <div id="error-message"> </div>
+</body>

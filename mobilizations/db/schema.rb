@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180214032628) do
+ActiveRecord::Schema.define(version: 20180219203446) do
 
-  create_table "metas", force: :cascade do |t|
+  create_table "meta", force: :cascade do |t|
     t.string "title", null: false
     t.text "description", null: false
-    t.integer "status", null: false
-    t.integer "type", null: false
+    t.integer "status", default: 0, null: false
+    t.integer "meta_type", default: 0, null: false
     t.float "limit"
     t.datetime "time_limit"
     t.datetime "aproved_at"
