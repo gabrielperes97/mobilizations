@@ -22,6 +22,22 @@
     margin-right: 4%;
     margin-left: 2%;
 }
+.feedback-up, .feedback-down{
+    font-size: 20px;
+    padding-top: 10px;
+}
+.feedback-up{
+    float: left;
+}
+.feedback-down{
+    padding-left: 35px;
+}
+.feedback-up:hover{
+    color: green;
+}
+.feedback-down:hover{
+    color: red;
+}
 /*Ajustar para telas menores*/
 @media (max-width: 1000px) {
     .container-left, .container-right{
