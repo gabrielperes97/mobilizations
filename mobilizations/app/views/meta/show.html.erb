@@ -22,12 +22,21 @@
                     <th><h3><b>Unidade</th><td><h3>:&nbsp;&nbsp;&nbsp;&nbsp;<%= @meta.unity%></td>
                 </tr>
             </table>
-            <form action="/votar?voto=1" method="GET">
+            <form action="/meta" method="PATCH" data-remote="true" accept-charset="UTF-8">
+                <input type="hidden" value="<%= @meta.id %>" name="meta[id]" />
+                <button type="submit" name="aprovar_imediatamente">Aprovar imediatamente</button>
+            </form>
+            <form action="/voto" method="POST" data-remote="true" accept-charset="UTF-8">
+                <input type="hidden" value="1" name="voto[voto]" />
+                <input type="hidden" value="<%= @meta.id %>" name="voto[meta_id]" />
                 <button type="submit" name="aprovar">Aprovar</button>
             </form>
-            <form action="/votar?voto=0" method="GET">
-                <button type="button" name="reprovar">Reprovar</button>
+            <form action="/voto" method="POST" data-remote="true" accept-charset="UTF-8">
+                <input type="hidden" value="0" name="voto[voto]" />
+                <input type="hidden" value="<%= @meta.id %>" name="voto[meta_id]" />
+                <button type="submit" name="reprovar" >Reprovar</button>
             </form>
+            <div id="error-message"> </div>
         </div>
     </body>
 </html>

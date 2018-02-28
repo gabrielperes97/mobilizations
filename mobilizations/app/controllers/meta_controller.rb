@@ -36,9 +36,22 @@ class MetaController < ApplicationController
         end
     end
 
+    def update
+        if (session[:login_id] != nil)
+            meta = Meta.find meta_params[:id]
+            if not meta.nil?
+                meta.status = 1
+                meta.save!
+                respond_to do |format|
+                    format.js {render :js => "window.location = '../'" }
+                end
+            end
+        end
+    end
+
     private
     def meta_params
-        params.require(:meta).permit(:title, :description, :time_limit, :limit, :unity)
+        params.require(:meta).permit(:id, :title, :description, :time_limit, :limit, :unity)
     end
 
 end

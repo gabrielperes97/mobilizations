@@ -4,10 +4,11 @@ class HomeController < ApplicationController
         if (session[:login_id] != nil)
             @user = Usuario.find(session[:login_id])
         end
-        @metas = Meta.all
-        @metas_progress = []
-        @metas.each do |m|
+        @metas_aprovadas = Meta.where("status = 1")
+        @metas_em_votacao = Meta.where("status = 0")
+        @metas_aprovadas.each do |m|
             m.define_singleton_method(:progresso) { 50 }
+            #m.define_singleton_method(:progresso) { RealizacaoMeta.having("meta_id = "+m.id.to_s).sum(:contribuicao) }
         end
     end
 

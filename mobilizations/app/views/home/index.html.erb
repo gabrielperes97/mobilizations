@@ -187,9 +187,9 @@
 				<h3><strong>Metas</strong></h3>
 				<a href="/meta/new" class="meta-button">+</a>
 			</div>
-			<% if @metas.length <= 0 %>
+			<% if @metas_aprovadas.length <= 0 %>
 			<p><h4 class="timeline-title" name="meta">Não há metas ativas</h4></p>
-			<%else @metas.each do |m| %>
+			<%else @metas_aprovadas.each do |m| %>
 				<%if m.status == 1 || m.status == 2 || m.status == 4%>
 				<!-- exibir metas apenas se status 1, 2, 4 (metas ativas) -->
 			<p><h4 class="timeline-title"><a href="/meta?id=<%=m.id %>"><%=m.title %></a></h4></p>
@@ -205,9 +205,9 @@
 			<div class="meta-tittle">
 				<h3><strong>Metas em votação</strong></h3>
 			</div>
-			<% if @metas.length <= 0 %>
+			<% if @metas_em_votacao.length <= 0 %>
 			<p><h4 class="timeline-title" name="meta">Não há metas disponiveis para votação</h4></p>
-			<%else @metas.each do |m| %>
+			<%else @metas_em_votacao.each do |m| %>
 				<% if m.status == 0 %>
 				<!--Exibir apenas metas propostas (status=0)-->
 			<p><h4 class="timeline-title"><a href="/meta?id=<%=m.id %>"><%=m.title %></a></h4></p>

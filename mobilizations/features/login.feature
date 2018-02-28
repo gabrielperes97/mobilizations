@@ -15,4 +15,4 @@ Esquema do Cenario: Login e autenticacao
 
 	Exemplos:
 		|	email				|	senha	|
-		|boi@bumba.com.br|123321|
+		|gober@gmail.com|123321|

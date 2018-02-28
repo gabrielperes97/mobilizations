@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resource :usuario
   resource :meta
   resource :realizacao_meta
+  resource :voto
   root :to => "home#index"
 end
