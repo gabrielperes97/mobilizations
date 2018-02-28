@@ -2,6 +2,12 @@
     <body>
         <div>
             <h2>Titulo: <%= @meta.title %></h2>
+            <form action="/votar?voto=1" method="GET">
+                <button type="submit" name="aprovar">Aprovar</button>
+            </form>
+            <form action="/votar?voto=0" method="GET">
+                <button type="button" name="reprovar">Reprovar</button>
+            </form>
         </div>
     </body>
 </html>

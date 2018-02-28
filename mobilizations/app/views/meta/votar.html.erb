@@ -1,0 +1,8 @@
+<%= form_for Meta.find(params[:id]), url: { action: "votar" } do |v| %>
+  <%= if v.votar = "aprovar"%>
+      <% true :votos %>
+  <% else %>
+      <% false :votos %>
+  <%= v.usuario :usuario %>
+  <%= v.id :meta %>
+<% end %>

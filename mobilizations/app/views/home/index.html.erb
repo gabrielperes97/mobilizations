@@ -181,6 +181,7 @@
 	</div>
 	<!--Parte de Metas e Ranking-->
 	<div class="container-right col-lg-5 col-md-5" id="stayFixed">
+		<!--Metas ativas-->
 		<div class="row">
 			<div class="meta-tittle">
 				<h3><strong>Metas</strong></h3>
@@ -189,13 +190,32 @@
 			<% if @metas.length <= 0 %>
 			<p><h4 class="timeline-title" name="meta">Não há metas ativas</h4></p>
 			<%else @metas.each do |m| %>
+				<%if m.status == 1 || m.status == 2 || m.status == 4%>
+				<!-- exibir metas apenas se status 1, 2, 4 (metas ativas) -->
 			<p><h4 class="timeline-title"><a href="/meta?id=<%=m.id %>"><%=m.title %></a></h4></p>
 			<div class="progress">
 				<div class="progress-bar progress-bar-success progress-bar-striped active" aria-valuenow="<%= m.progresso%>" aria-valuemin="0" aria-valuemax="<%= m.limit%>" style="width: 50%;">50%</div>
 			</div>
+				<% end %>
 			<% end %> 
 			<% end %>                    
 		</div>
+		<!--Metas em votação-->
+		<div class="row">
+			<div class="meta-tittle">
+				<h3><strong>Metas em votação</strong></h3>
+			</div>
+			<% if @metas.length <= 0 %>
+			<p><h4 class="timeline-title" name="meta">Não há metas disponiveis para votação</h4></p>
+			<%else @metas.each do |m| %>
+				<% if m.status == 0 %>
+				<!--Exibir apenas metas propostas (status=0)-->
+			<p><h4 class="timeline-title"><a href="/meta?id=<%=m.id %>"><%=m.title %></a></h4></p>
+				<% end %>
+			<% end %> 
+			<% end %>                    
+		</div>
+		<!--Ranking-->
 		<div class="row">
 			<div class="meta-tittle">
 				<h3><strong>Ranking</strong> </h3>

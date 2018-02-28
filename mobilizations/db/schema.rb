@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180227161614) do
+ActiveRecord::Schema.define(version: 20180228162303) do
 
   create_table "meta", force: :cascade do |t|
     t.string "title", null: false
@@ -51,6 +51,14 @@ ActiveRecord::Schema.define(version: 20180227161614) do
     t.integer "admin_level", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "votos", force: :cascade do |t|
+    t.boolean "votos", null: false
+    t.integer "meta_id", null: false
+    t.integer "usuario_id", null: false
+    t.index ["meta_id"], name: "index_votos_on_meta_id"
+    t.index ["usuario_id"], name: "index_votos_on_usuario_id"
   end
 
 end
