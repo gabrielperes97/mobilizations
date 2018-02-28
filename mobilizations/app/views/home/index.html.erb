@@ -187,9 +187,9 @@
 				<a href="/meta/new" class="meta-button">+</a>
 			</div>
 			<% if @metas.length <= 0 %>
-			<p><h4 class="timeline-title">Não há metas ativas</h4></p>
+			<p><h4 class="timeline-title" name="meta">Não há metas ativas</h4></p>
 			<%else @metas.each do |m| %>
-			<p><h4 class="timeline-title"><%=m.title %></h4></p>
+			<p><h4 class="timeline-title"><a href="/meta?id=<%=m.id %>"><%=m.title %></a></h4></p>
 			<div class="progress">
 				<div class="progress-bar progress-bar-success progress-bar-striped active" aria-valuenow="<%= m.progresso%>" aria-valuemin="0" aria-valuemax="<%= m.limit%>" style="width: 50%;">50%</div>
 			</div>

@@ -1,8 +1,13 @@
 class MetaController < ApplicationController
 
     def index
+        
     end
 
+    def show
+        @meta = Meta.find(params[:id])
+    end
+    
     def new
         if (session[:login_id] != nil)
             @meta = Meta.new
