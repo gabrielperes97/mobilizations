@@ -13,7 +13,7 @@
 	background-color: #eeeeee;
 	left: -1%;
 }
-/*icone de cada publicação*/
+/*icone de cada publicacao*/
 .timeline > li {
 	margin-bottom: 20px;
 	margin-left: 30px;
@@ -37,7 +37,7 @@
 .timeline > li:after {
 	clear: both;
 }
-/*Bloco da publicação*/
+/*Bloco da publicacao*/
 .timeline > li > .timeline-panel {
 	width: 100%;
 	float: left;
@@ -48,7 +48,7 @@
 	-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
 	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
 }
-/*Bico do bloco de publicação*/
+/*Bico do bloco de publicacao*/
 .timeline > li > .timeline-panel:before {
 	position: absolute;
 	top: 26px;
@@ -60,7 +60,7 @@
 	border-bottom: 15px solid transparent;
 	content: " ";
 }
-/*Espaço para bico do bloco de publicação*/
+/*Espaco para bico do bloco de publicacao*/
 .timeline > li > .timeline-panel:after {
 	position: absolute;
 	top: 27px;
@@ -73,7 +73,7 @@
 	content: " ";
 }
 
-/*Icone da publicação*/
+/*Icone da publicacao*/
 .timeline > li > .timeline-badge {
 	color: #fff;
 	width: 50px;
@@ -126,7 +126,7 @@
 .timeline-badge.info {
 	background-color: #5bc0de !important;
 }
-/*Titulo publicação*/
+/*Titulo publicacao*/
 .timeline-title {
 	margin-top: 0;
 	color: inherit;
